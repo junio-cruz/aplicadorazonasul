@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  section {
+    margin: 0 15%;
+    border: 2px solid var(--black);
+  }
+}

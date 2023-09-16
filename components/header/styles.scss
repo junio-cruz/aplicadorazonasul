@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  padding: 0 15%;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 5rem;
+  border: 2px solid var(--primary-color);
+  background: var(--primary-color);
+
+  nav {
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      list-style-type: none;
+
+      li {
+        a {
+          font-size: 18px;
+          text-decoration: none;
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
