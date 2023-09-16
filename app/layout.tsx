@@ -1,11 +1,12 @@
 import React from 'react';
 
-import type { Metadata } from 'next';
+import '@/styles/globals.scss';
+
 import Head from 'next/head';
+import { Metadata } from 'next';
 import { Rubik } from 'next/font/google';
 
 import Header from '@/components/header/Header';
-
 const rubik = Rubik({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
