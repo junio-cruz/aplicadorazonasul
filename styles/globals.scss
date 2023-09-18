@@ -4,9 +4,19 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
 :root {
   --primary-color: #8e635a;
   --secondary-color: #dc672b;
   --white: #fff;
   --black: #000;
+  --black-light: #333333;
+  --gray: #999999;
+  --gray-dark: #666666;
+  --gray-light: #CCCCCC;
+  --swiper-theme-color: #8e635a;
 }
