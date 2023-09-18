@@ -7,11 +7,12 @@
 body {
   width: 100vw;
   height: 100vh;
+  background-color: var(--background2);
 }
 
 :root {
   --primary-color: #8e635a;
-  --secondary-color: #dc672b;
+  --secondary-color: #f78759;
   --white: #fff;
   --black: #000;
   --black-light: #333333;
@@ -19,4 +20,5 @@ body {
   --gray-dark: #666666;
   --gray-light: #CCCCCC;
   --swiper-theme-color: #8e635a;
+  --background: #fcf6f0;
 }

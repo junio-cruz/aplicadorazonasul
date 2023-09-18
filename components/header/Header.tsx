@@ -8,29 +8,34 @@ export default async function Header() {
     <header className="header">
       <Image src={Logo} alt="Aplicador Zona Sul" width={100} height={80} />
       <nav>
-        <ul>
-          <li>
-            <Link href="/#clinic">
-              Início
-            </Link>
-          </li>
-          <li>
-            <Link href="/#services">
-              Serviços
-            </Link>
-          </li>
-          <li>
-            <Link href="/#about">
-              Sobre nós
-            </Link>
-          </li>
-          <li>
-            <Link href="/#contact">
-              Contato
-            </Link>
-          </li>
-        </ul>
+        <div>
+          <Link href="/#clinic">
+            Início
+          </Link>
+          <Link href="/#about">
+            Sobre nós
+          </Link>
+        </div>
+        <div>
+          <Link href="/#services">
+            Serviços
+          </Link>
+          <Link href="/#contact">
+            Contato
+          </Link>
+        </div>
       </nav>
+      <div className="whatsapp">
+        <span>(21) </span>
+        <Link
+          href="https://api.whatsapp.com/send?phone=21970913515"
+          target="_blank"
+          rel="noreferrer"
+        >
+          97091-3515
+        </Link>
+        <Image priority src="/whatsapp-icon.png" alt="Whatsapp" width={25} height={25} />
+      </div>
     </header>
   );
 }
