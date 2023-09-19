@@ -84,14 +84,14 @@ export default function Contact() {
         </form>
       <div className="whatsapp-message">
         <h3>Quer agendar uma visita conosco?</h3>
-        <p>Fale diretamente com a gente pelo <br /> Whatsap</p>
+        <p>Fale diretamente com a gente pelo <br /> Whatsapp</p>
         <Link
           href="https://api.whatsapp.com/send?phone=21970913515"
           target="_blank"
           rel="noreferrer"
         >
           <span>Mandar mensagem</span>
-          <Image priority src="/whatsapp-icon.png" alt="Whatsapp" width={25} height={25} />
+          <Image priority src="/whatsapp-icon.png" alt="Whatsapp" width={30} height={30} />
         </Link>
       </div>
     </section>
