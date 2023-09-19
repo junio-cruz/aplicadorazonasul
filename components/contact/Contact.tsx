@@ -35,53 +35,53 @@ export default function Contact() {
         <div className="line-right" />
       </div>
       <form onSubmit={handleSubmit}>
+        <input
+          name="name"
+          type="text"
+          required
+          placeholder="Nome"
+          onInvalid={e =>
+            (e.target as HTMLInputElement).setCustomValidity(
+              'Digite seu nome!',
+            )
+          }
+          onInput={e =>
+            (e.target as HTMLInputElement).setCustomValidity('')
+          }
+        />
+        <input
+          name="email"
+          type="email"
+          required
+          placeholder="Email"
+          onInvalid={e =>
+            (e.target as HTMLInputElement).setCustomValidity(
+              'Digite seu Email @!',
+            )
+          }
+          onInput={e =>
+            (e.target as HTMLInputElement).setCustomValidity('')
+          }
+        />
+        <div className="phoneNumber-and-city">
           <input
-            name="name"
+            name="phoneNumber"
             type="text"
-            required
-            placeholder="Nome"
-            onInvalid={e =>
-              (e.target as HTMLInputElement).setCustomValidity(
-                'Digite seu nome!',
-              )
-            }
-            onInput={e =>
-              (e.target as HTMLInputElement).setCustomValidity('')
-            }
+            placeholder="Telefone"
+            value={phoneNumber}
+            onChange={e => handleChangePhoneNumber(e)}
           />
-          <input
-            name="email"
-            type="email"
-            required
-            placeholder="Email"
-            onInvalid={e =>
-              (e.target as HTMLInputElement).setCustomValidity(
-                'Digite seu Email @!',
-              )
-            }
-            onInput={e =>
-              (e.target as HTMLInputElement).setCustomValidity('')
-            }
-          />
-          <div className="phoneNumber-and-city">
-            <input
-              name="phoneNumber"
-              type="text"
-              placeholder="Telefone"
-              value={phoneNumber}
-              onChange={e => handleChangePhoneNumber(e)}
-            />
-            <input name="city" type="text" placeholder="Cidade" />
-          </div>
-          <div className="offers-and-news">
-            <input id="offers-and-news" name="offers-and-news" type="checkbox" className="offers-and-news-checkbox" />
-            <label htmlFor="offers-and-news">Quero receber ofertas e novidades por email</label>
-          </div>
-          <textarea placeholder="Conte-nos em que podemos tirar sua dúvida?" />
-          <button type="submit">
-            Enviar
-          </button>
-        </form>
+          <input name="city" type="text" placeholder="Cidade" />
+        </div>
+        <div className="offers-and-news">
+          <input id="offers-and-news" name="offers-and-news" type="checkbox" className="offers-and-news-checkbox" />
+          <label htmlFor="offers-and-news">Quero receber ofertas e novidades por email</label>
+        </div>
+        <textarea placeholder="Conte-nos em que podemos tirar sua dúvida?" />
+        <button type="submit">
+          Enviar
+        </button>
+      </form>
       <div className="whatsapp-message">
         <h3>Quer agendar uma visita conosco?</h3>
         <p>Fale diretamente com a gente pelo <br /> Whatsap</p>

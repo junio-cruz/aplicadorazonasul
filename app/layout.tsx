@@ -7,6 +7,8 @@ import { Metadata } from 'next';
 import { Rubik } from 'next/font/google';
 
 import Header from '@/components/header/Header';
+import Footer from "@/components/footer/Footer";
+
 const rubik = Rubik({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -38,6 +40,7 @@ export default function RootLayout({
       <body className={rubik.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
