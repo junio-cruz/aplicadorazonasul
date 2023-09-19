@@ -1,0 +1,48 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+
+  .see-more {
+    align-self: flex-end;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: Bold;
+    color: var(--secondary-color);
+
+    @media screen and (max-width: 720px) {
+      display: none;
+    }
+  }
+
+  .service-item-container-one {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+    flex-wrap: nowrap;
+
+    @media screen and (max-width: 1000px) {
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }
+  }
+
+  .service-item-container-two {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+
+    @media screen and (max-width: 1000px) {
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }
+  }
+}

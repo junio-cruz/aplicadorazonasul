@@ -1,0 +1,66 @@
+.service-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+
+  width: 20%;
+
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+
+  @media screen and (max-width: 720px) {
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+  }
+
+  .image {
+    img {
+      height: 22rem;
+      width: 100%;
+      object-fit: fill;
+      border-radius: 1rem;
+
+      @media screen and (max-width: 720px) {
+        height: 20rem;
+        width: 15rem;
+      }
+    }
+  }
+
+  .description {
+    flex: 1;
+    width: 100%;
+    flex-wrap: nowrap;
+    text-overflow: ellipsis;
+
+    p {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 24px;
+      text-overflow: ellipsis;
+
+      @media screen and (max-width: 720px) {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 18px;
+      }
+    }
+  }
+
+   span {
+    align-self: flex-start;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.service-item:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
