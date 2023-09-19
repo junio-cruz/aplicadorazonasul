@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default async function Header() {
   return (
     <header className="header">
-      <Image src={Logo} alt="Aplicador Zona Sul" width={100} height={80} />
+      <Image priority src={Logo} alt="Aplicador Zona Sul" width={100} height={80} />
       <nav>
         <div>
           <Link href="/#clinic">
@@ -26,7 +26,7 @@ export default async function Header() {
         </div>
       </nav>
       <div className="whatsapp">
-        <span>(21) </span>
+        <span>(21)</span>
         <Link
           href="https://api.whatsapp.com/send?phone=21970913515"
           target="_blank"
