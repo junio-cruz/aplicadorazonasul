@@ -2,7 +2,8 @@ import React from 'react';
 import '@/styles/home.scss';
 
 import ImageSlide from '@/components/imageSlide/ImageSlide';
-import About from "@/components/about/About";
+import About from '@/components/about/About';
+import Contact from '@/components/contact/Contact';
 
 export default function Home() {
   return (
@@ -12,9 +13,7 @@ export default function Home() {
       <section id="services">
         <h1>SERVIÇOS</h1>
       </section>
-      <section id="contact">
-        <h1>CONTATOS</h1>
-      </section>
+      <Contact />
     </main>
   );
 }
