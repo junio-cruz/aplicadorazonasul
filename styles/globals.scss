@@ -8,6 +8,39 @@ body {
   background-color: var(--background2);
 }
 
+.title-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+
+  .line-left {
+    height: 3px;
+    width: 20%;
+    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+
+    @media screen and (max-width: 640px) {
+      flex: 1;
+    }
+  }
+
+  .line-right {
+    flex: 1;
+    height: 3px;
+    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 36px;
+  }
+}
+
 :root {
   --primary-color: #8e635a;
   --secondary-color: #f78759;
