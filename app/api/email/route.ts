@@ -32,12 +32,9 @@ export async function POST(req: NextRequest) {
         ]
       : undefined;
 
-  const emailToSend = 'aplicadorazonasulrj@gmail.com';
-  const teste = 'junio.souza_cruz@outlook.com';
-
   const response = await resend.emails.send({
     from: 'Aplicadora Zona Sul <onboarding@resend.dev>',
-    to: ['aplicadorazonasulrj@gmail.com', teste],
+    to: ['aplicadorazonasulrj@gmail.com'],
     subject: 'Solicitação de Serviço!',
     react: ResultEmail({
       name,
