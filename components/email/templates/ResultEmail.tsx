@@ -79,7 +79,7 @@ export default function EmailTemplate({
                 }}
               >
                 <Img
-                  src={`${baseUrl}/static/icon.png`}
+                  src={`${baseUrl}/static/icon.jpg`}
                   width={50}
                   height={50}
                   alt="Aplicadora Zona Sul"
@@ -198,8 +198,9 @@ export default function EmailTemplate({
                     className="font-semibold text-text-font underline"
                     rel="noreferrer"
                   >
-                    whatsapp ou fale através do número (21)97303-3016.
+                    whatsapp
                   </a>
+                  ou fale através do número (21)97303-3016.
                 </span>
               </Text>
             </Section>
