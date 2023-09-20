@@ -4,12 +4,14 @@ import '@/styles/globals.scss';
 
 import Head from 'next/head';
 import { Metadata } from 'next';
-import { Rubik } from 'next/font/google';
+import { Barlow_Condensed } from 'next/font/google';
+
+import { Toaster } from 'react-hot-toast';
 
 import Header from '@/components/header/Header';
-import Footer from "@/components/footer/Footer";
+import Footer from '@/components/footer/Footer';
 
-const rubik = Rubik({ subsets: ['latin'] });
+const barlow = Barlow_Condensed({ subsets: ['latin'], weight: '400' });
 
 export const metadata: Metadata = {
   title: 'Aplicadora Zona Sul',
@@ -37,7 +39,8 @@ export default function RootLayout({
       <Head>
         <link rel="shortcut icon" type="image/jpg" href="../public/icon.jpg" />
       </Head>
-      <body className={rubik.className}>
+      <body className={barlow.className}>
+        <Toaster />
         <Header />
         {children}
         <Footer />

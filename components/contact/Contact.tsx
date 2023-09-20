@@ -34,7 +34,6 @@ async function sendEmail(input: SendEmailInput): Promise<Response> {
 
 export default function Contact() {
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [file, setFile] = useState<File>();
 
   const handleChangePhoneNumber = useCallback(
     (e?: React.ChangeEvent<HTMLInputElement>, value?: string) => {
@@ -59,25 +58,24 @@ export default function Contact() {
         description: e.currentTarget.description.value,
         city: e.currentTarget.city.value,
         phoneNumber: e.currentTarget.phoneNumber.value,
-        offersAndNews: e.currentTarget.offersAndNews.value === 'on',
+        offersAndNews: e.currentTarget.offersAndNews.checked,
         createdAt: dateFnsFormat({
           date: new Date(),
         }),
       };
-
       try {
-        await sendEmail({
-          email: sendEmailInput.email,
-          name: sendEmailInput.name || 'Cliente',
-          description: sendEmailInput.description,
-          phoneNumber: sendEmailInput.phoneNumber,
-          city: sendEmailInput.city,
-          offersAndNews: sendEmailInput.offersAndNews,
-          createdAt: sendEmailInput.createdAt,
-        });
-        toast.success('Resultado enviado com Sucesso!');
+        await sendEmail(sendEmailInput);
+        const form: HTMLFormElement = document.getElementById(
+          'form',
+        ) as HTMLFormElement;
+        form.reset();
+        return toast.success(
+          'Mensagem enviada com Sucesso!Em breve entraremos em contato com voce!',
+        );
       } catch (e) {
-        toast.error('Error ao enviar o !');
+        return toast.error(
+          'Ocorreu um erro ao enviar a mensagem, fale conosco através do whatsapp!',
+        );
       }
     },
     [],
@@ -90,7 +88,7 @@ export default function Contact() {
         <h2>Contato</h2>
         <div className="line-right" />
       </div>
-      <form onSubmit={handleSubmit}>
+      <form id="form" onSubmit={handleSubmit}>
         <input
           name="clientname"
           type="text"
@@ -108,7 +106,7 @@ export default function Contact() {
           placeholder="Email"
           onInvalid={e =>
             (e.target as HTMLInputElement).setCustomValidity(
-              'Digite seu Email @!',
+              'Digite seu endereço de email!',
             )
           }
           onInput={e => (e.target as HTMLInputElement).setCustomValidity('')}
