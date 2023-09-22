@@ -2,72 +2,9 @@ import './styles.scss';
 import React from 'react';
 import ServiceItem from '@/components/services/serviceItem/ServiceItem';
 import Link from 'next/link';
+import { services } from '@/utils/data';
 
-type ServiceItem = {
-  id: number;
-  image: string;
-  description: string;
-  link: string;
-  price?: number;
-};
 export default async function Services() {
-  const dataFirstRow: ServiceItem[] = [
-    {
-      id: 1,
-      image: '/about_1.webp',
-      description: '+ de 30 anos trabalhando com revestimento no Rio!',
-      link: '',
-      price: 10,
-    },
-    {
-      id: 2,
-      image: '/about_2.webp',
-      description: 'Oferecemos um período de manutenção após o serviço.',
-      link: '',
-      price: 10,
-    },
-    {
-      id: 3,
-      image: '/about_3.webp',
-      description: 'Seu imovel impecável com nosso serviço de limpeza!',
-      link: '',
-      price: 10,
-    },
-    {
-      id: 4,
-      image: '/slide3.jpg',
-      description: 'Seu imovel impecável com nosso serviço de limpeza!',
-      link: '',
-      price: 10,
-    },
-  ];
-  const dataSecondRow: ServiceItem[] = [
-    {
-      id: 1,
-      image: '/slide1.jpg',
-      description: '+ de 30 anos trabalhando com revestimento no Rio!',
-      link: '',
-    },
-    {
-      id: 2,
-      image: '/slide2.jpg',
-      description: 'Oferecemos um período de manutenção após o serviço.',
-      link: '',
-    },
-    {
-      id: 3,
-      image: '/slide3.jpg',
-      description: 'Seu imovel impecável com nosso serviço de limpeza!',
-      link: '',
-    },
-    {
-      id: 4,
-      image: '/slide4.jpg',
-      description: 'Seu imovel impecável com nosso serviço de limpeza!',
-      link: '',
-    },
-  ];
-
   return (
     <section id="services" className="services">
       <div className="title-container">
@@ -75,11 +12,27 @@ export default async function Services() {
         <h2>Serviços</h2>
         <div className="line-right" />
       </div>
+      <div className="service-details">
+        <ul>
+          <li>Raspagem sem poeira</li>
+          <li>Apartamento mobilado</li>
+        </ul>
+
+        <ul>
+          <li>Aplicação sem cheiro</li>
+          <li>Fosco, Brilhoso, Acetinado</li>
+        </ul>
+
+        <ul>
+          <li>Proteção de móveis</li>
+          <li>Secagem rápida para quem precisa mudar</li>
+        </ul>
+      </div>
       <Link href="#contact" className="see-more">
         Ver mais
       </Link>
       <div className="service-item-container-one">
-        {dataFirstRow.map(item => (
+        {services.primary.map(item => (
           <ServiceItem
             key={item.id}
             image={item.image}
@@ -90,7 +43,7 @@ export default async function Services() {
         ))}
       </div>
       <div className="service-item-container-two">
-        {dataSecondRow.map(item => (
+        {services.secondary.map(item => (
           <ServiceItem
             key={item.id}
             image={item.image}

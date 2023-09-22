@@ -75,4 +75,13 @@
       object-fit: cover;
     }
   }
+
+  .social-media {
+    display: flex;
+    gap: 1rem;
+
+    @media screen and (max-width: 740px) {
+      display: none;
+    }
+  }
 }
