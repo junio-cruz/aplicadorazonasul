@@ -5,15 +5,49 @@
   align-items: flex-start;
   gap: 2rem;
 
+  .service-details {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 720px) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 0.8rem;
+      list-style-type: disc;
+      margin-left: 20px;
+
+      li {
+        font-size: 28px;
+        line-height: 24px;
+        font-weight: lighter;
+      }
+    }
+  }
+
   .see-more {
     align-self: flex-end;
     font-size: 18px;
     line-height: 20px;
     font-weight: Bold;
     color: var(--secondary-color);
+    display: none;
 
-    @media screen and (max-width: 720px) {
-      display: none;
+    @media screen and (max-width: 640px) {
+      display: block;
     }
   }
 

@@ -1,31 +1,9 @@
 import './styles.scss';
 import React from 'react';
 import AboutItem from '@/components/about/AboutItem/AboutItem';
-
-type AboutItemProps = {
-  id: number;
-  image: string;
-  description: string;
-};
+import { aboutItems } from '@/utils/data';
 
 export default async function About() {
-  const data: AboutItemProps[] = [
-    {
-      id: 1,
-      image: '/about_1.webp',
-      description: '+ de 30 anos trabalhando com revestimento no Rio!',
-    },
-    {
-      id: 2,
-      image: '/about_2.webp',
-      description: 'Oferecemos um período de manutenção após o serviço.',
-    },
-    {
-      id: 3,
-      image: '/about_3.webp',
-      description: 'Seu imovel impecável com nosso serviço de limpeza!',
-    },
-  ];
   return (
     <section id="about" className="about">
       <div className="title-container">
@@ -40,7 +18,7 @@ export default async function About() {
         cara de novo, a cor da madeira fica mais evidente e bonita.
       </p>
       <div className="about-item-container">
-        {data.map(item => (
+        {aboutItems.map(item => (
           <AboutItem
             key={item.id}
             image={item.image}
