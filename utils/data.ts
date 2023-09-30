@@ -70,21 +70,21 @@ export const services: Services = {
   primary: [
     {
       id: 1,
-      image: '/about_1.webp',
+      image: '/service1.webp',
       description: '+ de 30 anos trabalhando com revestimento no Rio!',
       link: '',
       price: 10,
     },
     {
       id: 2,
-      image: '/about_2.webp',
+      image: '/service2.jpg',
       description: 'Oferecemos um período de manutenção após o serviço.',
       link: '',
       price: 10,
     },
     {
       id: 3,
-      image: '/about_3.webp',
+      image: '/slide7.jpg',
       description: 'Seu imovel impecável com nosso serviço de limpeza!',
       link: '',
       price: 10,
@@ -100,7 +100,7 @@ export const services: Services = {
   secondary: [
     {
       id: 1,
-      image: '/slide1.jpg',
+      image: '/slide6.jpg',
       description: '+ de 30 anos trabalhando com revestimento no Rio!',
       link: '',
     },
@@ -112,7 +112,7 @@ export const services: Services = {
     },
     {
       id: 3,
-      image: '/slide3.jpg',
+      image: '/slide5.jpg',
       description: 'Seu imovel impecável com nosso serviço de limpeza!',
       link: '',
     },
